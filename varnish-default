@@ -1,0 +1,24 @@
+backend default {
+    .host = "127.0.0.1";
+    .port = "8080";
+	.connect_timeout = 600s;
+	.first_byte_timeout = 600s;
+	.between_bytes_timeout = 600s;
+	.max_connections = 1000;
+}
+
+acl purge {
+        "localhost";
+  }
+
+sub vcl_recv {
+	set req.grace = 12h;
+
+  if (req.url ~ "\.(png|gif|jp(e)?g|css|js)$") {
+    return(lookup);
+  }
+
+sub vcl_fetch {
+	set req.grace = 12h;
+
+}
