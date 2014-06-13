@@ -10,9 +10,8 @@ sed -i 's/6081/80/g' /etc/default/varnish
 
 # Set Varnish default VCL to listen to Apache on port 8080
 mv /etc/varnish/default.vcl /etc/varnish/default.vcl.bak
-
-# Download Varnish default VCL
-wget "#" > /etc/varnish/default.vcl
+wget https://raw.githubusercontent.com/ronwl/cpanel-varnish/master/varnish-default
+mv varnish-default /etc/varnish/default.vcl
 
 # Make Apache listen to port 8080
 cp /usr/local/apache/conf/httpd.conf /usr/local/apache/conf/httpd.conf.bak
