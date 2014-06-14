@@ -13,6 +13,8 @@ sed -i 's/VARNISH_LISTEN_PORT=6081/VARNISH_LISTEN_PORT=80/g' /etc/sysconfig/varn
 mv /etc/varnish/default.vcl /etc/varnish/default.vcl.bak # Always make backup
 wget https://raw.githubusercontent.com/ronwl/cpanel-varnish/master/varnish-default
 mv varnish-default /etc/varnish/default.vcl
+ip=`ifconfig eth0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
+sed -i 's/ipplaceholder/'$ip'/g' /etc/varnish/default.vcl
 
 # Make Apache listen to port 8080
 cp /usr/local/apache/conf/httpd.conf /usr/local/apache/conf/httpd.conf.bak # Always make backup
