@@ -1,5 +1,5 @@
 backend default {
-    .host = "127.0.0.1";
+    .host = "ipplaceholder";
     .port = "8080";
 	.connect_timeout = 600s;
 	.first_byte_timeout = 600s;
