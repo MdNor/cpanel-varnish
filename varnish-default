@@ -7,18 +7,14 @@ backend default {
 	.max_connections = 1000;
 }
 
-acl purge {
-        "localhost";
-  }
-
 sub vcl_recv {
 	set req.grace = 12h;
 
   if (req.url ~ "\.(png|gif|jp(e)?g|css|js)$") {
     return(lookup);
   }
+}
 
 sub vcl_fetch {
 	set req.grace = 12h;
-
 }
