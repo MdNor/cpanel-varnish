@@ -19,7 +19,7 @@ sed -i 's/ipplaceholder/'$ip'/g' /etc/varnish/default.vcl
 # Make Apache listen to port 8080
 cp /usr/local/apache/conf/httpd.conf /usr/local/apache/conf/httpd.conf.bak # Always make backup
 sed -i 's/:80/:8080/g' /usr/local/apache/conf/httpd.conf
-sed -i 's/:80/:8080/g' /etc/chkserv.d/httpd # cPanel Apache monitoring
+sed -i 's/=80/=8080/g' /etc/chkserv.d/httpd # cPanel Apache monitoring
 
 # Start Apache & Varnish
 service apache restart
