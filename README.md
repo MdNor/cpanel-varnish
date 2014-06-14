@@ -1,10 +1,10 @@
 ## cpanel-varnish
 
 Install Varnish on cPanel server to serve static files.
+
 **Note:** Make sure you review the code before executing it.
 
-
-
+---
 
 #### Installation
 
@@ -20,7 +20,7 @@ chmod +x install.sh
 ./install.sh
 ````
 
-
+---
 
 #### Uninstall
 
