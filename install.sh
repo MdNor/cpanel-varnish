@@ -22,7 +22,7 @@ sed -i 's/:80/:8080/g' /usr/local/apache/conf/httpd.conf
 sed -i 's/=80/=8080/g' /etc/chkserv.d/httpd # cPanel Apache monitoring
 
 # Start Apache & Varnish
-service apache restart
+service httpd restart
 chkconfig varnish on # Set Varnish to run automatically after reboot
 service varnish start
 
