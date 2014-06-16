@@ -8,7 +8,7 @@ chkconfig varnish off
 cp /usr/local/apache/conf/httpd.conf.bak /usr/local/apache/conf/httpd.conf
 
 # Restart Apache
-service apache restart
+service httpd restart
 
 # Make sure Apache run on port 80 & Varnish not running
 netstat -plnt | grep 80
