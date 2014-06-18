@@ -20,6 +20,11 @@ chmod +x install.sh
 ./install.sh
 ````
 
+You can play around with Varnish setting to get best result based on your preferences
+````bash
+/etc/varnish/default.vcl
+````
+
 ---
 
 #### Uninstall
