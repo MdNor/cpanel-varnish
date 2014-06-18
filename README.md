@@ -22,7 +22,7 @@ chmod +x install.sh
 
 ---
 
-#### Installation
+#### Get The Setting Right
 
 You can play around with Varnish setting to get best result based on your preferences
 ````bash
