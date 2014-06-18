@@ -20,9 +20,23 @@ chmod +x install.sh
 ./install.sh
 ````
 
+---
+
+#### Installation
+
 You can play around with Varnish setting to get best result based on your preferences
 ````bash
-/etc/varnish/default.vcl
+nano /etc/varnish/default.vcl
+````
+
+You can validate the setting before applying
+````bash
+varnishd -C -f /etc/varnish/default.vcl
+````
+
+To apply the setting, restart Varnish
+````bash
+service Varnish restart
 ````
 
 ---
