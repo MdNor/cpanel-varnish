@@ -40,7 +40,7 @@ service Varnish restart
 In case you want to reverse the setting and uninstall Varnish
 
 ````bash
-wget https://raw.githubusercontent.com/ronwl/cpanel-varnish/master/uninstall.sh
+wget https://raw.githubusercontent.com/MdNor/cpanel-varnish/master/uninstall.sh
 ````
 
 ````bash
