@@ -2,22 +2,16 @@
 
 Install Varnish on cPanel server to serve static files.
 
-**Note:** Make sure you review the code before executing it.
-
 ---
 
 #### Installation
 
 ````bash
-wget https://raw.githubusercontent.com/ronwl/cpanel-varnish/master/install.sh
+wget https://raw.githubusercontent.com/MdNor/cpanel-varnish/master/install.sh
 ````
 
 ````bash
-chmod +x install.sh
-````
-
-````bash
-./install.sh
+sh install.sh
 ````
 
 ---
@@ -43,15 +37,12 @@ service Varnish restart
 
 #### Uninstall
 
-In case you want to reverse the setting
+In case you want to reverse the setting and uninstall Varnish
 
 ````bash
 wget https://raw.githubusercontent.com/ronwl/cpanel-varnish/master/uninstall.sh
 ````
 
 ````bash
-chmod +x uninstall.sh
+sh uninstall.sh
 ````
-
-````bash
-./uninstall.sh
